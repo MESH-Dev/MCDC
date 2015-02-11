@@ -26,12 +26,9 @@
             // display a sub field value
             ?>
 
-            <div class="four columns <?php if ($i == 0 || $i == 2) { echo 'offset-by-two'; } ?>">
-              <?php if( get_sub_field('textbox_link')) { ?>
-                <a href="<?php the_sub_field('textbox_link'); ?>">
-              <?php } ?>
-              
-                <div class="overview-callout <?php if( get_sub_field('textbox_link')) { echo 'overview-callout-hover'; } ?>">
+            <div class="four columns">
+
+                <div class="overview-callout">
                   <div class="overview-callout-headline">
                     <span><?php the_sub_field('textbox_headline'); ?></span>
                   </div>
@@ -40,9 +37,6 @@
                   </div>
                 </div>
 
-              <?php if( get_sub_field('textbox_link')) { ?>
-                </a>
-              <?php } ?>
             </div>
 
             <?php
@@ -95,15 +89,38 @@
   </div>
 </section> -->
 
-<section id="testimonial">
+<section id="video-thumbnails">
   <div class="container">
-    <?php if (get_field('testimonial')) { ?>
-    <div class="testimonial-callout">
-      <blockquote><?php the_field('testimonial'); ?></blockquote>
-      <br/>
-      <span>&mdash; <?php the_field('testimonial_author'); ?></span>
-    </div>
-    <?php } ?>
+    <h3>What's coming up with the coalition</h3>
+
+    <?php
+
+      $args = array(
+        'post_type' => 'calendarentry',
+      );
+
+      // The Query
+      $the_query = new WP_Query( $args );
+
+      // The Loop
+      if ( $the_query->have_posts() ) {
+
+        while ( $the_query->have_posts() ) {
+          $the_query->the_post();
+          ?>
+
+          <div><?php echo get_the_title(); ?></div>
+
+          <?php
+        }
+      } else {
+        // no posts found
+      }
+      /* Restore original Post Data */
+      wp_reset_postdata();
+
+    ?>
+
   </div>
 </section>
 
@@ -123,53 +140,19 @@
   <iframe width="770" height="463" src="//www.youtube.com/embed/HwZ_MNT6C1k" frameborder="0" allowfullscreen></iframe>
 </div>
 
-
-<section id="video-thumbnails">
+<section id="testimonial">
   <div class="container">
-    <h3>Watch the six components of regenerative communities</h3>
-
-    <?php
-
-    // check if the repeater field has rows of data
-    if( have_rows('videos') ):
-
-      // loop through the rows of data
-      while ( have_rows('videos') ) : the_row();
-
-      ?>
-
-      <div class="four columns">
-        <?php
-
-        $t = get_sub_field('video_title');
-        $t = strtolower($t);
-        $t = str_replace(" ", "-", $t);
-
-        ?>
-        <a href="#" data-featherlight="#<?php echo $t; ?>">
-          <div class="video-holder" style="background: url(<?php the_sub_field('video_thumbnail'); ?>) no-repeat top center fixed; background-size: cover; background-attachment: scroll;">
-            <span><?php the_sub_field('video_title'); ?><br/><br/><img src="<?php echo get_template_directory_uri() ?>/assets/img/play-btn-sml.png" /></span>
-          </div>
-        </a>
-        <div id="<?php echo $t; ?>" class="lightbox"><iframe src="//player.vimeo.com/video/<?php the_sub_field('vimeo_id'); ?>" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-      </div>
-
-      <?php
-
-    endwhile;
-
-    else :
-
-      // no rows found
-
-    endif;
-
-    ?>
-
+    <?php if (get_field('testimonial')) { ?>
+    <div class="testimonial-callout">
+      <blockquote><?php the_field('testimonial'); ?></blockquote>
+      <br/>
+      <span>&mdash; <?php the_field('testimonial_author'); ?></span>
+    </div>
+    <?php } ?>
   </div>
 </section>
 
-<section id="case-studies" style="background: url(<?php the_field('background_image_3'); ?>) no-repeat top center fixed; background-size: cover; background-attachment: scroll;">
+<section id="case-studies">
   <div class="container">
 
     <?php

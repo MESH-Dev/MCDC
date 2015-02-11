@@ -1,3 +1,8 @@
+<section id="image">
+  <div class="image-holder" style="background: url(<?php the_field('background_image_3', get_page_by_title('Home Page')->ID); ?>) no-repeat center fixed; background-size: cover; background-attachment: scroll;">
+  </div>
+</section>
+
 <footer>
   <div class="container">
     <div class="four columns">
@@ -6,12 +11,10 @@
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/SW_Logo_white.png" />
         </div>
         <div class="footer-contact">
-          <p>City of Williamson<br/>
-          PO Box 1517<br/>
+          <p>29 East 3rd Ave<br/>
           Williamson, WV 25661</p>
-          <p><strong>Call:</strong> 1-304-235-1510<br/>
-          <strong>Fax:</strong> 1-304-235-1516<br/>
-          <strong>Hours:</strong> Monday - Friday, 9am - 5pm</p>
+          <p><strong>Call:</strong> 1-304-235-3400<br/>
+          <strong>Fax:</strong> 1-304-235-3403</p>
         </div>
       </div>
     </div>
@@ -36,7 +39,6 @@
           <a href="https://www.facebook.com/SustainableWilliamsonWV" target="_blank"><div class="circle-icon"><i class="fa fa-facebook"></i></div></a>
           <a href="https://twitter.com/suswilliamson" target="_blank"><div class="circle-icon"><i class="fa fa-twitter"></i></div></a>
           <a href="http://vimeo.com/sustainablewilliamson" target="_blank"><div class="circle-icon"><i class="fa fa-vimeo-square"></i></div></a>
-          <a href="https://www.youtube.com/user/suswilliamson" target="_blank"><div class="circle-icon"><i class="fa fa-youtube"></i></div></a>
         </div>
       </div>
     </div>

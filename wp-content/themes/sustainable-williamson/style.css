@@ -79,44 +79,44 @@ $minion:"minion-pro";
 */
 /* #Global Backgrounds
 ================================================== */
-/* line 49, assets/sass/_base.scss */
+/* line 51, assets/sass/_base.scss */
 .light-green-bg {
   background: #a8c48e;
 }
 
-/* line 50, assets/sass/_base.scss */
+/* line 52, assets/sass/_base.scss */
 .blue-bg {
   background: #4694af;
 }
 
-/* line 51, assets/sass/_base.scss */
+/* line 53, assets/sass/_base.scss */
 .bright-green-bg {
   background: #f26e61;
 }
 
-/* line 52, assets/sass/_base.scss */
+/* line 54, assets/sass/_base.scss */
 .white-bg {
   background: white;
 }
 
-/* line 54, assets/sass/_base.scss */
+/* line 56, assets/sass/_base.scss */
 .yellow-bg {
   background: #f8ee95;
 }
 
-/* line 55, assets/sass/_base.scss */
+/* line 57, assets/sass/_base.scss */
 .teal-bg {
   background: #9befc7;
 }
 
-/* line 56, assets/sass/_base.scss */
+/* line 58, assets/sass/_base.scss */
 .purple-bg {
   background: #a874ca;
 }
 
 /* #Basic Styles
 ================================================== */
-/* line 61, assets/sass/_base.scss */
+/* line 63, assets/sass/_base.scss */
 body {
   -webkit-font-smoothing: antialiased;
   /* Fix for webkit rendering */
@@ -127,7 +127,7 @@ body {
 ================================================== */
 /* #Forms
 ================================================== */
-/* line 75, assets/sass/_base.scss */
+/* line 77, assets/sass/_base.scss */
 input[type="text"],
 input[type="email"],
 textarea {
@@ -141,23 +141,23 @@ textarea {
   box-sizing: border-box;
 }
 
-/* line 78, assets/sass/_base.scss */
+/* line 80, assets/sass/_base.scss */
 input[type="text"] {
   width: 49%;
 }
 
-/* line 79, assets/sass/_base.scss */
+/* line 81, assets/sass/_base.scss */
 input[type="email"] {
   width: 49%;
   float: right;
 }
 
-/* line 80, assets/sass/_base.scss */
+/* line 82, assets/sass/_base.scss */
 textarea {
   width: 100%;
 }
 
-/* line 84, assets/sass/_base.scss */
+/* line 86, assets/sass/_base.scss */
 input[type="submit"] {
   padding: 1% 10%;
   display: block;
@@ -173,7 +173,7 @@ input[type="submit"] {
   width: 100%;
 }
 
-/* line 85, assets/sass/_base.scss */
+/* line 87, assets/sass/_base.scss */
 input[type="submit"]:hover {
   color: white;
   background: black;
@@ -184,7 +184,7 @@ input[type="submit"]:hover {
 ================================================== */
 /* #Images
 ================================================== */
-/* line 95, assets/sass/_base.scss */
+/* line 97, assets/sass/_base.scss */
 img {
   max-width: 100%;
   height: auto;
@@ -192,60 +192,60 @@ img {
 
 /* WordPress Image Styles
    ========================================================================== */
-/* line 102, assets/sass/_base.scss */
+/* line 104, assets/sass/_base.scss */
 .alignnone {
   margin: 5px 20px 20px 0;
 }
 
-/* line 103, assets/sass/_base.scss */
+/* line 105, assets/sass/_base.scss */
 .aligncenter, div.aligncenter {
   display: block;
   margin: 5px auto 5px auto;
 }
 
-/* line 104, assets/sass/_base.scss */
+/* line 106, assets/sass/_base.scss */
 .alignright {
   float: right;
   margin: 5px 0 20px 20px;
 }
 
-/* line 105, assets/sass/_base.scss */
+/* line 107, assets/sass/_base.scss */
 .alignleft {
   float: left;
   margin: 5px 20px 20px 0;
 }
 
-/* line 106, assets/sass/_base.scss */
+/* line 108, assets/sass/_base.scss */
 .aligncenter {
   display: block;
   margin: 5px auto 5px auto;
 }
 
-/* line 107, assets/sass/_base.scss */
+/* line 109, assets/sass/_base.scss */
 a img.alignright {
   float: right;
   margin: 5px 0 20px 20px;
 }
 
-/* line 108, assets/sass/_base.scss */
+/* line 110, assets/sass/_base.scss */
 a img.alignnone {
   margin: 5px 20px 20px 0;
 }
 
-/* line 109, assets/sass/_base.scss */
+/* line 111, assets/sass/_base.scss */
 a img.alignleft {
   float: left;
   margin: 5px 20px 20px 0;
 }
 
-/* line 110, assets/sass/_base.scss */
+/* line 112, assets/sass/_base.scss */
 a img.aligncenter {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 111, assets/sass/_base.scss */
+/* line 113, assets/sass/_base.scss */
 .wp-caption {
   background: #FFF;
   max-width: 96%;
@@ -253,22 +253,22 @@ a img.aligncenter {
   text-align: center;
 }
 
-/* line 112, assets/sass/_base.scss */
+/* line 114, assets/sass/_base.scss */
 .wp-caption.alignnone {
   margin: 5px 20px 20px 0;
 }
 
-/* line 113, assets/sass/_base.scss */
+/* line 115, assets/sass/_base.scss */
 .wp-caption.alignleft {
   margin: 5px 20px 20px 0;
 }
 
-/* line 114, assets/sass/_base.scss */
+/* line 116, assets/sass/_base.scss */
 .wp-caption.alignright {
   margin: 5px 0 20px 20px;
 }
 
-/* line 115, assets/sass/_base.scss */
+/* line 117, assets/sass/_base.scss */
 .wp-caption img {
   border: 0 none;
   height: auto;
@@ -278,7 +278,7 @@ a img.aligncenter {
   width: auto;
 }
 
-/* line 116, assets/sass/_base.scss */
+/* line 118, assets/sass/_base.scss */
 .wp-caption p.wp-caption-text, .gallery-caption {
   font-size: 11px;
   line-height: 17px;
@@ -286,7 +286,7 @@ a img.aligncenter {
   padding: 0 4px 5px;
 }
 
-/* line 119, assets/sass/_base.scss */
+/* line 121, assets/sass/_base.scss */
 .add-bottom {
   margin-bottom: 20px !important;
 }
@@ -1481,7 +1481,7 @@ header #logo img {
 header #menu {
   display: none;
   float: right;
-  color: #98f0c6;
+  color: white;
   margin-top: 40px;
   cursor: pointer;
 }
@@ -1516,13 +1516,13 @@ header #mainNav ul {
 header #mainNav ul li {
   text-transform: uppercase;
   display: inline;
-  padding: 0px 10px;
+  padding: 0px 5px;
 }
 /* line 51, assets/sass/_layout.scss */
 header #mainNav ul li a {
-  color: #98f0c6;
+  color: white;
   font-family: "league-gothic";
-  font-size: 24px;
+  font-size: 26px;
   text-decoration: none;
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
@@ -1579,7 +1579,7 @@ header #responsiveNav ul li {
 }
 /* line 66, assets/sass/_layout.scss */
 header #responsiveNav ul li a {
-  color: #98f0c6;
+  color: white;
   font-family: "league-gothic";
   font-size: 26px;
   text-decoration: none;
@@ -1852,7 +1852,7 @@ header .content-right img {
 
 /* line 155, assets/sass/_layout.scss */
 #content {
-  background: #98f0c6;
+  background: #ab6fc9;
 }
 /* line 156, assets/sass/_layout.scss */
 #content .content-callout {
@@ -1988,7 +1988,7 @@ header .content-right img {
 
 /* line 192, assets/sass/_layout.scss */
 #testimonial {
-  background: #98f0c6;
+  background: #ab6fc9;
 }
 /* line 193, assets/sass/_layout.scss */
 #testimonial .testimonial-callout {
@@ -2094,7 +2094,12 @@ header .content-right img {
   color: white;
 }
 
-/* line 224, assets/sass/_layout.scss */
+/* line 225, assets/sass/_layout.scss */
+#image .image-holder {
+  height: 180px;
+}
+
+/* line 229, assets/sass/_layout.scss */
 .header-image {
   height: 600px;
   position: absolute;
@@ -2103,77 +2108,77 @@ header .content-right img {
   width: 100%;
 }
 
-/* line 232, assets/sass/_layout.scss */
+/* line 237, assets/sass/_layout.scss */
 .lightbox {
   display: none;
 }
 
-/* line 236, assets/sass/_layout.scss */
+/* line 241, assets/sass/_layout.scss */
 .featherlight-content {
   padding: 20px 20px 15px 20px !important;
 }
 
 /* PAGE Styles
 ================================================== */
-/* line 243, assets/sass/_layout.scss */
+/* line 248, assets/sass/_layout.scss */
 #page-content {
   padding-top: 30px;
 }
-/* line 244, assets/sass/_layout.scss */
+/* line 249, assets/sass/_layout.scss */
 #page-content .page-content-block {
   margin-left: 0px;
 }
 
 /* Contact Styles
 ================================================== */
-/* line 250, assets/sass/_layout.scss */
+/* line 255, assets/sass/_layout.scss */
 #wpgmza_map {
   margin-bottom: 30px;
 }
 
 /* FOOTER Styles
 ================================================== */
-/* line 257, assets/sass/_layout.scss */
+/* line 262, assets/sass/_layout.scss */
 footer {
   background: black;
   width: 100%;
 }
-/* line 258, assets/sass/_layout.scss */
+/* line 263, assets/sass/_layout.scss */
 footer .footer-content {
   padding: 30px 0px;
 }
-/* line 259, assets/sass/_layout.scss */
+/* line 264, assets/sass/_layout.scss */
 footer .footer-content .footer-logo {
   margin-bottom: 10px;
 }
-/* line 261, assets/sass/_layout.scss */
+/* line 266, assets/sass/_layout.scss */
 footer .footer-content .footer-contact p {
   font-family: nexa_light;
   color: white;
   line-height: 1.5em;
 }
-/* line 263, assets/sass/_layout.scss */
+/* line 268, assets/sass/_layout.scss */
 footer .footer-content .footer-headline {
   border-bottom: 3px solid white;
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-/* line 264, assets/sass/_layout.scss */
+/* line 269, assets/sass/_layout.scss */
 footer .footer-content .footer-headline span {
   font-family: "league-gothic";
   text-transform: uppercase;
   color: white;
   font-size: 22px;
 }
-/* line 266, assets/sass/_layout.scss */
+/* line 271, assets/sass/_layout.scss */
 footer .footer-content .footer-body {
   padding-bottom: 5px;
 }
-/* line 267, assets/sass/_layout.scss */
+/* line 272, assets/sass/_layout.scss */
 footer .footer-content .footer-body p {
   margin-bottom: 10px;
 }
-/* line 268, assets/sass/_layout.scss */
+/* line 273, assets/sass/_layout.scss */
 footer .footer-content .footer-body p a {
   font-family: "league-gothic";
   text-transform: uppercase;
@@ -2181,12 +2186,12 @@ footer .footer-content .footer-body p a {
   font-size: 22px;
   text-decoration: none;
 }
-/* line 269, assets/sass/_layout.scss */
+/* line 274, assets/sass/_layout.scss */
 footer .footer-content .footer-body p a:hover {
   opacity: 0.7;
 }
 
-/* line 275, assets/sass/_layout.scss */
+/* line 280, assets/sass/_layout.scss */
 .circle-icon {
   float: left;
   margin-right: 5px;
@@ -2199,7 +2204,7 @@ footer .footer-content .footer-body p a:hover {
   text-align: center;
 }
 
-/* line 287, assets/sass/_layout.scss */
+/* line 292, assets/sass/_layout.scss */
 .circle-icon:hover {
   background-color: black;
   color: white;
@@ -2221,12 +2226,12 @@ footer .footer-content .footer-body p a:hover {
 </a>
 
 */
-/* line 310, assets/sass/_layout.scss */
+/* line 315, assets/sass/_layout.scss */
 .btn-home {
   margin-bottom: 50px !important;
 }
 
-/* line 312, assets/sass/_layout.scss */
+/* line 317, assets/sass/_layout.scss */
 .btn {
   padding: 1% 10%;
   display: block;
@@ -2235,19 +2240,19 @@ footer .footer-content .footer-body p a:hover {
   text-align: center;
   margin-bottom: 8px;
 }
-/* line 313, assets/sass/_layout.scss */
+/* line 318, assets/sass/_layout.scss */
 .btn .btn-headline {
   font-family: "league-gothic";
   text-transform: uppercase;
   font-size: 20px;
   line-height: 30px;
 }
-/* line 314, assets/sass/_layout.scss */
+/* line 319, assets/sass/_layout.scss */
 .btn .btn-body {
   font-family: nexa_light;
 }
 
-/* line 316, assets/sass/_layout.scss */
+/* line 321, assets/sass/_layout.scss */
 .btn:hover {
   background-color: black;
   color: white;

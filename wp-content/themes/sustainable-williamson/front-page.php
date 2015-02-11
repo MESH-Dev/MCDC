@@ -89,37 +89,75 @@
   </div>
 </section> -->
 
-<section id="video-thumbnails">
+<section id="calendar">
   <div class="container">
     <h3>What's coming up with the coalition</h3>
 
-    <?php
+    <div class="row">
+      <?php
 
-      $args = array(
-        'post_type' => 'calendarentry',
-      );
+        $args = array(
+          'post_type' => 'calendarentry',
+        );
 
-      // The Query
-      $the_query = new WP_Query( $args );
+        // The Query
+        $the_query = new WP_Query( $args );
 
-      // The Loop
-      if ( $the_query->have_posts() ) {
+        // The Loop
+        if ( $the_query->have_posts() ) {
 
-        while ( $the_query->have_posts() ) {
-          $the_query->the_post();
-          ?>
+          while ( $the_query->have_posts() ) {
+            $the_query->the_post();
 
-          <div><?php echo get_the_title(); ?></div>
+            $terms = get_the_terms($post->ID, 'type');
 
-          <?php
+            if (!empty($terms)) {
+              $term = array_pop($terms);
+            }
+
+            $date = get_field('event_date');
+
+            ?>
+
+            <div class="four columns">
+              <div class="calendar-entry-header">
+
+                <?php echo $term->slug; ?>
+
+                <div class="calendar-entry-date-month <?php echo $term->slug; ?>-bg"><?php date('M',$date); ?></div>;
+                <div class="calendar-entry-date-day <?php echo $term->slug; ?>"><?php date('d',$date); ?></div>;
+                <div class="calendar-entry-title <?php echo $term->slug; ?>"><?php get_the_title(); ?></div>;
+
+              </div>
+              <div class="calendar-entry-body">
+                <?php the_content(); ?>
+              </div>
+            </div>
+
+            <?php
+          }
+        } else {
+          // no posts found
         }
-      } else {
-        // no posts found
-      }
-      /* Restore original Post Data */
-      wp_reset_postdata();
+        /* Restore original Post Data */
+        wp_reset_postdata();
 
-    ?>
+      ?>
+    </div>
+
+    <div class="row">
+      <div class="six columns offset-by-three">
+        <div class="calendar-cta">
+          <p>See more of what's coming up with us in the future.</p>
+          <p>Check out our Calendar of Events.</p>
+          <a href="">
+            <div class="btn">
+              <div class="btn-headline">View the Events Calendar</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
 
   </div>
 </section>

@@ -1,0 +1,70 @@
+/* Imported Fonts
+================================================== */
+
+/* Import fonts. Example:
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700');
+@import url('assets/libs/font-awesome-4.1.0/css/font-awesome.min.css');
+
+*/
+
+@font-face { font-family: nexa_bold; src: url(assets/fonts/nexa_bold.otf); }
+@font-face { font-family: nexa_light; src: url(assets/fonts/nexa_light.otf); }
+
+/* #Typography
+================================================== */
+
+	//base
+
+	html, body{ font-family: $nexa-light; font-size: 16px; line-height: 20px; }
+
+	//headings
+	h1 { text-transform: uppercase; font-size: 56px; line-height: 56px; letter-spacing: .04em; font-family: $gothic; }
+	h2 { font-family: $nexa-light; font-size: 34px; line-height: 39px; }
+	h3 { font-family: $gothic; font-size: 26px; line-height: 39px; text-transform: uppercase;}
+	h4 { font-family: $nexa-light; font-size: 22px; line-height: 33px; }
+	h5 { font-family: $gothic; font-size: 22px; line-height: 39px; text-transform: uppercase; }
+	h6 { font-family: $gothic; font-size: 20px; line-height: 39px; text-transform: uppercase; }
+
+	//paragraphs
+	p { margin: 0 0 18px 0; }
+	p img { margin: 0; }
+
+	//styles
+	em { font-style: italic; }
+	strong { font-weight: bold;  }
+
+
+	//blockquote
+	blockquote, blockquote p { font-family: $nexa-light; font-size: 34px; line-height: 39px; margin: 10px 0px; }
+	blockquote:before { content: url('assets/img/left_blockquote.png'); position: relative; top: -15px; left: -15px; }
+	blockquote:after { content: url('assets/img/right_blockquote.png'); position: relative; bottom: -15px; right: -15px; }
+	blockquote cite { font-family: $gothic; text-transform: uppercase; }
+	blockquote cite:before { content: "-"; }
+	blockquote cite a, blockquote cite a:visited {}
+
+	//horizontal rule
+	hr {}
+
+
+/* #Links
+================================================== */
+	a { text-decoration: none; color: $blue; }
+	a:hover, a:focus { opacity: 0.7; }
+	p a, p a:visited { color: $olive; }
+
+
+/* #Lists
+================================================== */
+	ul, ol { margin-bottom: 0px; }
+	ul { list-style: circle outside; }
+	ol { list-style: decimal; }
+	ol, ul, ul.square, ul.circle, ul.disc { margin-left: 30px; }
+	ul.square { list-style: square outside; }
+	ul.circle { list-style: circle outside; }
+	ul.disc { list-style: disc outside; }
+	ul ul, ul ol,
+	ol ol, ol ul { margin: 0px 0 0px 20px; font-size: 100%;  }
+	ul ul li, ul ol li,
+	ol ol li, ol ul li { margin-bottom: 0px; }
+	li { line-height: 26px; margin-bottom: 0px; }

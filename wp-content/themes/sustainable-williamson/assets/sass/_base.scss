@@ -1,0 +1,119 @@
+
+
+/* Table of Content
+==================================================
+	#Imports
+	#Variables
+	#Reset
+	#Basic Styles
+	#Images
+	#Buttons
+	#Tabs
+	#Forms
+	#Misc */
+
+
+/* COMPASS IMPORTS
+================================================= */
+@import "compass/css3";
+
+/* VARIABLES
+================================================= */
+
+
+/*
+
+Provide variables for all colors and fonts. Examples:
+
+$red: #E31B23;
+$minion:"minion-pro";
+
+*/
+
+$light-green: #a8c48e;
+$blue: #84c6be;
+$bright-green: #7ccc79;
+$yellow: #98f0c6;
+$olive: #515a1c;
+$lighter-green: #d4e4bf;
+
+$gothic: "league-gothic";
+$nexa-bold: nexa_bold;
+$nexa-light: nexa_light;
+
+$one_third: percentage(4/12);
+
+/* #Global Backgrounds
+================================================== */
+
+.light-green-bg { background: #a8c48e; }
+.blue-bg { background: #4694af; }
+.bright-green-bg { background: #f26e61; }
+.white-bg { background: white; }
+
+.yellow-bg { background: #f8ee95; }
+.teal-bg { background: #9befc7; }
+.purple-bg { background: #a874ca; }
+
+
+/* #Basic Styles
+================================================== */
+body {
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+ }
+
+
+/* #Buttons
+================================================== */
+
+button{}
+
+/* #Forms
+================================================== */
+
+input[type="text"],
+input[type="email"],
+textarea { border: 1px solid #999999; padding: 15px; background: rgba(255,255,255,0.5); margin: 0 0 10px 0; font-family: $nexa-light; font-size: 14px; display: inline; box-sizing: border-box;}
+input[type="text"] { width: 49%; }
+input[type="email"] { width: 49%; float: right; }
+textarea { width: 100%; }
+input[type="password"]{}
+input[type="search"]{}
+input[type="number"]{}
+input[type="submit"]{ padding: 1% 10%; display: block; border: 2px solid black; color: black; text-align: center; margin: 30px auto; font-family: $gothic; text-transform: uppercase; font-size: 20px; line-height: 30px; background: white; width: 100%; }
+input[type="submit"]:hover { color: white; background: black; cursor: pointer; }
+
+
+/* #Forms
+================================================== */
+
+
+/* #Images
+================================================== */
+
+img {
+	max-width: 100%;
+	height: auto; }
+
+/* WordPress Image Styles
+   ========================================================================== */
+
+.alignnone {margin:5px 20px 20px 0;}
+.aligncenter,div.aligncenter {display:block;margin:5px auto 5px auto;}
+.alignright {float:right;margin:5px 0 20px 20px;}
+.alignleft {float:left;margin:5px 20px 20px 0;}
+.aligncenter {display:block;margin:5px auto 5px auto;}
+a img.alignright {float:right;margin:5px 0 20px 20px;}
+a img.alignnone {margin:5px 20px 20px 0;}
+a img.alignleft {float:left;margin:5px 20px 20px 0;}
+a img.aligncenter {display:block;margin-left:auto;margin-right:auto;}
+.wp-caption {background:#FFF;max-width:96%;padding:5px 3px 10px;text-align:center;}
+.wp-caption.alignnone {margin:5px 20px 20px 0;}
+.wp-caption.alignleft {margin:5px 20px 20px 0;}
+.wp-caption.alignright {margin:5px 0 20px 20px;}
+.wp-caption img {border:0 none;height:auto;margin:0;max-width:98.5%;padding:0;width:auto;}
+.wp-caption p.wp-caption-text,.gallery-caption {font-size:11px;line-height:17px;margin:0;padding:0 4px 5px;}
+.sticky {}
+.bypostauthor {}
+	.add-bottom { margin-bottom: 20px !important; }

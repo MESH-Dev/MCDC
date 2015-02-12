@@ -109,7 +109,7 @@
         </div>
       </div>
       <div class="ten columns">
-        <div id="mainNav">
+        <nav id="mainNav">
           <?php if(has_nav_menu('main_nav')){
               $defaults = array(
                 'theme_location'  => 'main_nav',
@@ -132,7 +132,7 @@
             }else{
               echo "<p><em>main_nav</em> doesn't exist! Create it and it'll render here.</p>";
             } ?>
-        </div>
+        </nav>
       </div>
     </div>
   </div>

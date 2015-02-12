@@ -62,16 +62,19 @@ $one_third: percentage(4/12);
 .teal-bg { background: #9befc7; }
 .purple-bg { background: #a874ca; }
 
-.black { color: black; }
+.black { color: black; border-color: black; }
 .black-bg { background: black; }
-.education { color: $education; }
+.education { color: $education; border-color: $education; }
 .education-bg { background: $education; }
-.clinic { color: $clinic; }
+.clinic { color: $clinic; border-color: $clinic; }
 .clinic-bg { background: $clinic; }
-.running { color: $running; }
+.running { color: $running; border-color: $running; }
 .running-bg { background: $running; }
-.agricultural { color: $agricultural; }
+.agricultural { color: $agricultural; border-color: $agricultural; }
 .agricultural-bg { background: $agricultural; }
+
+.events { color: $purple; }
+.events-bg { background: $purple; }
 
 /* #Basic Styles
 ================================================== */

@@ -98,6 +98,7 @@
 
         $args = array(
           'post_type' => 'calendarentry',
+          'posts_per_page' => 3
         );
 
         // The Query
@@ -113,6 +114,9 @@
 
             if (!empty($terms)) {
               $term = array_pop($terms);
+              $color = $term->slug;
+            } else {
+              $color = 'black';
             }
 
             $date = get_field('event_date');
@@ -122,11 +126,9 @@
             <div class="four columns">
               <div class="calendar-entry-header">
 
-                <?php echo $term->slug; ?>
-
-                <div class="calendar-entry-date-month <?php echo $term->slug; ?>-bg"><?php date('M',$date); ?></div>;
-                <div class="calendar-entry-date-day <?php echo $term->slug; ?>"><?php date('d',$date); ?></div>;
-                <div class="calendar-entry-title <?php echo $term->slug; ?>"><?php get_the_title(); ?></div>;
+                <div class="calendar-entry-date-month <?php echo $color; ?>-bg"><?php echo date('M',$date); ?></div>
+                <div class="calendar-entry-date-day <?php echo $color; ?>"><?php echo date('d',$date); ?></div>
+                <div class="calendar-entry-title <?php echo $color; ?>"><?php echo get_the_title(); ?></div>
 
               </div>
               <div class="calendar-entry-body">

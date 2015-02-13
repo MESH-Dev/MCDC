@@ -454,6 +454,7 @@ blockquote, blockquote p {
   font-size: 34px;
   line-height: 39px;
   margin: 10px 0px;
+  text-indent: -0.6em;
 }
 
 /* line 40, assets/sass/_typography.scss */

@@ -36,7 +36,7 @@
 
 
 	//blockquote
-	blockquote, blockquote p { font-family: $nexa-light; font-size: 34px; line-height: 39px; margin: 10px 0px; }
+	blockquote, blockquote p { font-family: $nexa-light; font-size: 34px; line-height: 39px; margin: 10px 0px; text-indent: -0.6em; }
 	blockquote:before { content: url('assets/img/left_blockquote.png'); position: relative; top: -15px; left: -15px; }
 	blockquote:after { content: url('assets/img/right_blockquote.png'); position: relative; bottom: -15px; right: -15px; }
 	blockquote cite { font-family: $gothic; text-transform: uppercase; }

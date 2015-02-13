@@ -2476,6 +2476,21 @@ footer .footer-content .footer-body p a:hover {
   color: white;
 }
 
+/* line 364, assets/sass/_layout.scss */
+.calendar-icon {
+  border: 2px solid black;
+  text-align: center;
+  padding: 2px;
+  font-size: 10px !important;
+}
+
+/* line 365, assets/sass/_layout.scss */
+.calendar-icon:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
 /* #Blog Styles
 ================================================== */
 /* #Media Queries

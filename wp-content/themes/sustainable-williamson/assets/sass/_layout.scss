@@ -361,6 +361,9 @@ footer { background: black; width: 100%;
 .filter { float: left; padding: 1% 7%; margin-right: 10px; }
 .filter:hover { background-color: black !important; color: white; }
 
+.calendar-icon { border: 2px solid black; text-align: center; padding: 2px; font-size: 10px !important;  }
+.calendar-icon:hover { background: black; color: white; cursor: pointer; }
+
 /* #Blog Styles
 ================================================== */
 

@@ -152,7 +152,8 @@
         <div class="calendar-cta">
           <p>See more of what's coming up with us in the future.</p>
           <p>Check out our Calendar of Events.</p>
-          <a href="">
+          <?php $calendar = get_page_by_title("Calendar"); ?>
+          <a href="<?php echo get_permalink($calendar->ID); ?>">
             <div class="btn">
               <div class="btn-headline">View the Events Calendar</div>
             </div>

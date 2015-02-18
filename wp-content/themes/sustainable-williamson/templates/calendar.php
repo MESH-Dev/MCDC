@@ -42,7 +42,7 @@
 
                   <div class="calendar-current">
                     <div class="calendar-current-header events">
-                      <h3>Events for <?php the_date("l, F j"); ?></h3>
+                      <h3>Events for <?php echo date("l, F j"); ?></h3>
                     </div>
 
                     <?php

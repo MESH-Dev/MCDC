@@ -2184,6 +2184,7 @@ header .content-right img {
 .calendar-current {
   margin: 20px 0;
   float: left;
+  width: 100%;
 }
 
 /* line 228, assets/sass/_layout.scss */
@@ -2226,6 +2227,7 @@ header .content-right img {
 .calendar-current-filter {
   display: block;
   width: 100%;
+  float: left;
 }
 
 /* line 237, assets/sass/_layout.scss */

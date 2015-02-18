@@ -95,22 +95,21 @@
               ?>
             </div>
 
+          </div>
 
-            <div class="calendar-current-filter">
-              <h3 class="filter-header">Filter Upcoming Events</h3>
+          <div class="calendar-current-filter">
+            <h3 class="filter-header">Filter Upcoming Events</h3>
 
-              <a href="">
-                <div class="btn filter">
-                  <div class="btn-headline">View by Event Type</div>
-                </div>
-              </a>
-              <a href="">
-                <div class="btn filter">
-                  <div class="btn-headline">View by Date</div>
-                </div>
-              </a>
-            </div>
-
+            <a href="">
+              <div class="btn filter">
+                <div class="btn-headline">View by Event Type</div>
+              </div>
+            </a>
+            <a href="">
+              <div class="btn filter">
+                <div class="btn-headline">View by Date</div>
+              </div>
+            </a>
           </div>
 
           <!-- Running -->

@@ -224,7 +224,7 @@ header { background-position: top center; width: 100%; height: 700px; position: 
 
 .calendar-cta { text-align: center; margin-top: 20px; }
 
-.calendar-current { margin: 20px 0; float: left; }
+.calendar-current { margin: 20px 0; float: left; width: 100%; }
 .calendar-current-header { margin-bottom: 10px; }
 
 .calendar-current-left { width: 20%; float: left; }
@@ -232,7 +232,7 @@ header { background-position: top center; width: 100%; height: 700px; position: 
 
 .calendar-current-today { font-family: $gothic; text-transform: uppercase; border-radius: 50%; width: 100px; height: 80px; color: white; text-align: center; line-height: 30px; float: left; margin-right: 3px; background-color: $purple; font-size: 28px; padding-top: 20px; margin-top: 25px; }
 
-.calendar-current-filter { display: block; width: 100%; }
+.calendar-current-filter { display: block; width: 100%; float: left; }
 
 #case-studies { padding: 50px;
 	h3 { margin-bottom: 10px; display: block; text-align: center; color: white; }

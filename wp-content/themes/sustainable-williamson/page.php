@@ -25,6 +25,48 @@
           </div>
         <?php } ?>
 
+        <?php
+
+        // check if the repeater field has rows of data
+        if( have_rows('resources') ):
+
+          echo '<h3>Here are resources to help you stay healthy</h3>';
+
+          // loop through the rows of data
+          while ( have_rows('resources') ) : the_row();
+
+          ?>
+
+          <div class="four columns resources">
+            <a href="<?php the_sub_field('resource_link'); ?>" target="_blank">
+              <div class="case-study">
+                <div class="case-study-image">
+                  <img src="<?php the_sub_field('resource_image'); ?>" />
+                </div>
+                <div class="case-study-title">
+                  <div class="case-study-title-text">
+                    <span><?php the_sub_field('resource_title'); ?></span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <?php
+
+        endwhile;
+
+        else :
+
+          // no rows found
+
+        endif;
+
+        ?>
+
+
+        <div class="clear"></div>
+
       </div>
       <div class="four columns sidebar">
 

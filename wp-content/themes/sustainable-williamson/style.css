@@ -2296,7 +2296,7 @@ h3 {
 
 /* line 255, assets/sass/_layout.scss */
 .calendar-type-header {
-  border-top: 3px solid black;
+  border-top: 2px solid black;
   padding: 30px 0 20px;
   margin-top: 20px;
   float: left;
@@ -2475,6 +2475,7 @@ footer .footer-content .footer-body p a:hover {
   float: left;
   padding: 1% 7%;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 /* line 362, assets/sass/_layout.scss */
@@ -2500,6 +2501,21 @@ footer .footer-content .footer-body p a:hover {
 
 /* #Blog Styles
 ================================================== */
+/* line 370, assets/sass/_layout.scss */
+.active {
+  background: black;
+  color: white;
+}
+
+/* line 372, assets/sass/_layout.scss */
+.calendar-by-date {
+  padding-top: 30px;
+  border-top: 2px solid black;
+  margin-top: 20px;
+  width: 100%;
+  float: left;
+}
+
 /* #Media Queries
 ================================================== */
 /* Smaller than standard 960 (devices and browsers) */

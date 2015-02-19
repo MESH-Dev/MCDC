@@ -29,7 +29,8 @@
 
                 $args = array(
                   'post_type' => 'calendarentry',
-                  'orderby' => 'post_date'
+                  'orderby' => 'post_date',
+                  'posts_per_page' => -1
                 );
 
                 // The Query
@@ -100,269 +101,399 @@
           <div class="calendar-current-filter">
             <h3 class="filter-header">Filter Upcoming Events</h3>
 
-            <a href="">
-              <div class="btn filter">
+
+              <div class="btn filter" id="event-btn">
                 <div class="btn-headline">View by Event Type</div>
               </div>
-            </a>
-            <a href="">
-              <div class="btn filter">
+
+
+              <div class="btn filter" id="date-btn">
                 <div class="btn-headline">View by Date</div>
               </div>
-            </a>
+
           </div>
 
-          <!-- Running -->
+          <div class="calendar-by-events">
 
-          <?php
-
-            $args = array(
-              'post_type' => 'calendarentry',
-              'type' => 'running'
-            );
-
-            // The Query
-            $the_query = new WP_Query( $args );
-
-            // The Loop
-            if ( $the_query->have_posts() ) {
-
-              ?>
-
-              <div class="calendar-type-header running">
-                <h3>Upcoming Running and Walking Events</h3>
-              </div>
+              <!-- Running -->
 
               <?php
 
-              while ( $the_query->have_posts() ) {
-                $the_query->the_post();
+                $args = array(
+                  'post_type' => 'calendarentry',
+                  'type' => 'running',
+                  'posts_per_page' => -1
+                );
 
-                $terms = get_the_terms($post->ID, 'type');
+                // The Query
+                $the_query = new WP_Query( $args );
 
-                if (!empty($terms)) {
-                  $term = array_pop($terms);
-                  $color = $term->slug;
+                $counter = 0;
+
+                // The Loop
+                if ( $the_query->have_posts() ) {
+
+                  ?>
+
+                  <?php
+
+                  while ( $the_query->have_posts() ) {
+                    $the_query->the_post();
+
+                    $terms = get_the_terms($post->ID, 'type');
+
+                    if (!empty($terms)) {
+                      $term = array_pop($terms);
+                      $color = $term->slug;
+                    } else {
+                      $color = 'black';
+                    }
+
+                    $date = get_field('event_date');
+
+                    ?>
+
+                    <?php if ($date > strtotime(date('Y-m-d H:i:s'))) {
+
+                      if ($counter == 0) { ?>
+
+                        <div class="calendar-type-header running">
+                          <h3>Upcoming Running and Walking Events</h3>
+                        </div>
+
+                      <?php
+                      }
+
+                    ?>
+
+                    <div>
+                      <div class="calendar-entry-header">
+
+                        <div class="calendar-entry-date-month <?php echo $color; ?>-bg"><?php echo date('M',$date); ?></div>
+                        <div class="calendar-entry-date-day <?php echo $color; ?>"><?php echo date('d',$date); ?></div>
+                        <div class="calendar-entry-title <?php echo $color; ?>"><?php echo get_the_title(); ?></div>
+
+                      </div>
+                      <div class="calendar-entry-body">
+                        <?php the_excerpt(); ?>
+                      </div>
+                    </div>
+
+                    <?php
+
+                    $counter = $counter + 1;
+
+                    }
+                  }
                 } else {
-                  $color = 'black';
+                  // no posts found
                 }
-
-                $date = get_field('event_date');
-
-                ?>
-
-                <div>
-                  <div class="calendar-entry-header">
-
-
-                    <div class="calendar-entry-date-month <?php echo $color; ?>-bg"><?php echo date('M',$date); ?></div>
-                    <div class="calendar-entry-date-day <?php echo $color; ?>"><?php echo date('d',$date); ?></div>
-                    <div class="calendar-entry-title <?php echo $color; ?>"><?php echo get_the_title(); ?></div>
-
-                  </div>
-                  <div class="calendar-entry-body">
-                    <?php the_excerpt(); ?>
-                  </div>
-                </div>
-
-                <?php
-              }
-            } else {
-              // no posts found
-            }
-            /* Restore original Post Data */
-            wp_reset_postdata();
-
-          ?>
-
-          <!-- Clinic -->
-
-          <?php
-
-            $args = array(
-              'post_type' => 'calendarentry',
-              'type' => 'clinic'
-            );
-
-            // The Query
-            $the_query = new WP_Query( $args );
-
-            // The Loop
-            if ( $the_query->have_posts() ) {
+                /* Restore original Post Data */
+                wp_reset_postdata();
 
               ?>
 
-              <div class="calendar-type-header clinic">
-                <h3>Upcoming Clinic Events</h3>
-              </div>
+              <!-- Clinic -->
 
               <?php
 
-              while ( $the_query->have_posts() ) {
-                $the_query->the_post();
+                $args = array(
+                  'post_type' => 'calendarentry',
+                  'type' => 'clinic',
+                  'posts_per_page' => -1
+                );
 
-                $terms = get_the_terms($post->ID, 'type');
+                // The Query
+                $the_query = new WP_Query( $args );
 
-                if (!empty($terms)) {
-                  $term = array_pop($terms);
-                  $color = $term->slug;
+                $counter = 0;
+
+                // The Loop
+                if ( $the_query->have_posts() ) {
+
+                  ?>
+
+
+                  <?php
+
+                  while ( $the_query->have_posts() ) {
+                    $the_query->the_post();
+
+                    $terms = get_the_terms($post->ID, 'type');
+
+                    if (!empty($terms)) {
+                      $term = array_pop($terms);
+                      $color = $term->slug;
+                    } else {
+                      $color = 'black';
+                    }
+
+                    $date = get_field('event_date');
+
+                    ?>
+
+                    <?php if ($date > strtotime(date('Y-m-d H:i:s'))) {
+
+                      if ($counter == 0) { ?>
+
+                        <div class="calendar-type-header clinic">
+                          <h3>Upcoming Clinic Events</h3>
+                        </div>
+
+                      <?php
+                      }
+
+                    ?>
+                    <div>
+                      <div class="calendar-entry-header">
+
+                        <div class="calendar-entry-date-month <?php echo $color; ?>-bg"><?php echo date('M',$date); ?></div>
+                        <div class="calendar-entry-date-day <?php echo $color; ?>"><?php echo date('d',$date); ?></div>
+                        <div class="calendar-entry-title <?php echo $color; ?>"><?php echo get_the_title(); ?></div>
+
+                      </div>
+                      <div class="calendar-entry-body">
+                        <?php the_content(); ?>
+                      </div>
+                    </div>
+
+                    <?php
+
+                    $counter = $counter + 1;
+
+                    }
+                  }
                 } else {
-                  $color = 'black';
+                  // no posts found
                 }
-
-                $date = get_field('event_date');
-
-                ?>
-
-                <div>
-                  <div class="calendar-entry-header">
-
-
-                    <div class="calendar-entry-date-month <?php echo $color; ?>-bg"><?php echo date('M',$date); ?></div>
-                    <div class="calendar-entry-date-day <?php echo $color; ?>"><?php echo date('d',$date); ?></div>
-                    <div class="calendar-entry-title <?php echo $color; ?>"><?php echo get_the_title(); ?></div>
-
-                  </div>
-                  <div class="calendar-entry-body">
-                    <?php the_content(); ?>
-                  </div>
-                </div>
-
-                <?php
-              }
-            } else {
-              // no posts found
-            }
-            /* Restore original Post Data */
-            wp_reset_postdata();
-
-          ?>
-
-          <!-- Education -->
-
-          <?php
-
-            $args = array(
-              'post_type' => 'calendarentry',
-              'type' => 'education'
-            );
-
-            // The Query
-            $the_query = new WP_Query( $args );
-
-            // The Loop
-            if ( $the_query->have_posts() ) {
+                /* Restore original Post Data */
+                wp_reset_postdata();
 
               ?>
 
-              <div class="calendar-type-header education">
-                <h3>Upcoming Meetings and Educational Events</h3>
-              </div>
+              <!-- Education -->
 
               <?php
 
-              while ( $the_query->have_posts() ) {
-                $the_query->the_post();
+                $args = array(
+                  'post_type' => 'calendarentry',
+                  'type' => 'education',
+                  'posts_per_page' => -1
+                );
 
-                $terms = get_the_terms($post->ID, 'type');
+                // The Query
+                $the_query = new WP_Query( $args );
 
-                if (!empty($terms)) {
-                  $term = array_pop($terms);
-                  $color = $term->slug;
+                $counter = 0;
+
+                // The Loop
+                if ( $the_query->have_posts() ) {
+
+                  while ( $the_query->have_posts() ) {
+                    $the_query->the_post();
+
+                    $terms = get_the_terms($post->ID, 'type');
+
+                    if (!empty($terms)) {
+                      $term = array_pop($terms);
+                      $color = $term->slug;
+                    } else {
+                      $color = 'black';
+                    }
+
+                    $date = get_field('event_date');
+
+                    ?>
+
+                    <?php if ($date > strtotime(date('Y-m-d H:i:s'))) {
+
+                    if ($counter == 0) { ?>
+
+                      <div class="calendar-type-header education">
+                        <h3>Upcoming Meetings and Educational Events</h3>
+                      </div>
+
+                    <?php
+                    }
+                    ?>
+
+                    <div>
+                      <div class="calendar-entry-header">
+
+                        <div class="calendar-entry-date-month <?php echo $color; ?>-bg"><?php echo date('M',$date); ?></div>
+                        <div class="calendar-entry-date-day <?php echo $color; ?>"><?php echo date('d',$date); ?></div>
+                        <div class="calendar-entry-title <?php echo $color; ?>"><?php echo get_the_title(); ?></div>
+
+                      </div>
+                      <div class="calendar-entry-body">
+                        <?php the_content(); ?>
+                      </div>
+                    </div>
+
+                    <?php
+
+                    $counter = $counter + 1;
+
+                    }
+                  }
                 } else {
-                  $color = 'black';
+                  // no posts found
                 }
-
-                $date = get_field('event_date');
-
-                ?>
-
-                <div>
-                  <div class="calendar-entry-header">
-
-
-                    <div class="calendar-entry-date-month <?php echo $color; ?>-bg"><?php echo date('M',$date); ?></div>
-                    <div class="calendar-entry-date-day <?php echo $color; ?>"><?php echo date('d',$date); ?></div>
-                    <div class="calendar-entry-title <?php echo $color; ?>"><?php echo get_the_title(); ?></div>
-
-                  </div>
-                  <div class="calendar-entry-body">
-                    <?php the_content(); ?>
-                  </div>
-                </div>
-
-                <?php
-              }
-            } else {
-              // no posts found
-            }
-            /* Restore original Post Data */
-            wp_reset_postdata();
-
-          ?>
-
-          <!-- Agricultural -->
-
-          <?php
-
-            $args = array(
-              'post_type' => 'calendarentry',
-              'type' => 'agricultural'
-            );
-
-            // The Query
-            $the_query = new WP_Query( $args );
-
-            // The Loop
-            if ( $the_query->have_posts() ) {
+                /* Restore original Post Data */
+                wp_reset_postdata();
 
               ?>
 
-              <div class="calendar-type-header agricultural">
-                <h3>Upcoming Agricultural Events</h3>
-              </div>
+              <!-- Agricultural -->
 
               <?php
 
-              while ( $the_query->have_posts() ) {
-                $the_query->the_post();
+                $args = array(
+                  'post_type' => 'calendarentry',
+                  'type' => 'agricultural',
+                  'posts_per_page' => -1
+                );
 
-                $terms = get_the_terms($post->ID, 'type');
+                // The Query
+                $the_query = new WP_Query( $args );
 
-                if (!empty($terms)) {
-                  $term = array_pop($terms);
-                  $color = $term->slug;
+                $counter = 0;
+
+                // The Loop
+                if ( $the_query->have_posts() ) {
+
+                  while ( $the_query->have_posts() ) {
+                    $the_query->the_post();
+
+                    $terms = get_the_terms($post->ID, 'type');
+
+                    if (!empty($terms)) {
+                      $term = array_pop($terms);
+                      $color = $term->slug;
+                    } else {
+                      $color = 'black';
+                    }
+
+                    $date = get_field('event_date');
+
+                    ?>
+
+                    <?php if ($date > strtotime(date('Y-m-d H:i:s'))) {
+
+                    if ($counter == 0) { ?>
+
+                      <div class="calendar-type-header agricultural">
+                        <h3>Upcoming Agricultural Events</h3>
+                      </div>
+
+                    <?php
+                    }
+                    ?>
+
+                    <div>
+                      <div class="calendar-entry-header">
+
+                        <div class="calendar-entry-date-month <?php echo $color; ?>-bg"><?php echo date('M',$date); ?></div>
+                        <div class="calendar-entry-date-day <?php echo $color; ?>"><?php echo date('d',$date); ?></div>
+                        <div class="calendar-entry-title <?php echo $color; ?>"><?php echo get_the_title(); ?></div>
+
+                      </div>
+                      <div class="calendar-entry-body">
+                        <?php the_content(); ?>
+                      </div>
+                    </div>
+
+                    <?php
+
+                    $counter = $counter + 1;
+
+                    }
+                  }
                 } else {
-                  $color = 'black';
+                  // no posts found
+                }
+                /* Restore original Post Data */
+                wp_reset_postdata();
+
+              ?>
+
+            </div>
+
+            <div class="calendar-by-date">
+
+              <?php
+
+                $args = array(
+                  'post_type' => 'calendarentry',
+                  'meta_key' => 'event_date',
+                  'orderby' => 'meta_value',
+                  'posts_per_page' => -1,
+                  'order' => 'ASC'
+                );
+
+                // The Query
+                $the_query = new WP_Query( $args );
+
+                $counter = 0;
+
+                // The Loop
+                if ( $the_query->have_posts() ) {
+
+                  ?>
+
+                  <?php
+
+                  while ( $the_query->have_posts() ) {
+                    $the_query->the_post();
+
+                    $terms = get_the_terms($post->ID, 'type');
+
+                    if (!empty($terms)) {
+                      $term = array_pop($terms);
+                      $color = $term->slug;
+                    } else {
+                      $color = 'black';
+                    }
+
+                    $date = get_field('event_date');
+
+                    ?>
+
+                    <?php if ($date > strtotime(date('Y-m-d H:i:s'))) { ?>
+
+                    <div>
+                      <div class="calendar-entry-header">
+
+                        <div class="calendar-entry-date-month <?php echo $color; ?>-bg"><?php echo date('M',$date); ?></div>
+                        <div class="calendar-entry-date-day <?php echo $color; ?>"><?php echo date('d',$date); ?></div>
+                        <div class="calendar-entry-title <?php echo $color; ?>"><?php echo get_the_title(); ?></div>
+
+                      </div>
+                      <div class="calendar-entry-body">
+                        <?php the_content(); ?>
+                      </div>
+                    </div>
+
+                    <?php
+
+                    $counter = $counter + 1;
+
+                    }
+                  }
+                } else {
+                  // no posts found
                 }
 
-                $date = get_field('event_date');
+                if ($counter == 0) {
+                  echo "<p>No upcoming events!";
+                }
 
-                ?>
+                /* Restore original Post Data */
+                wp_reset_postdata();
 
-                <div>
-                  <div class="calendar-entry-header">
+              ?>
 
-
-                    <div class="calendar-entry-date-month <?php echo $color; ?>-bg"><?php echo date('M',$date); ?></div>
-                    <div class="calendar-entry-date-day <?php echo $color; ?>"><?php echo date('d',$date); ?></div>
-                    <div class="calendar-entry-title <?php echo $color; ?>"><?php echo get_the_title(); ?></div>
-
-                  </div>
-                  <div class="calendar-entry-body">
-                    <?php the_content(); ?>
-                  </div>
-                </div>
-
-                <?php
-              }
-            } else {
-              // no posts found
-            }
-            /* Restore original Post Data */
-            wp_reset_postdata();
-
-          ?>
+            </div>
 
           </div>
         </div>

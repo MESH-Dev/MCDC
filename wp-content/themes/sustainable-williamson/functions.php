@@ -12,7 +12,14 @@
     wp_enqueue_style('font-awesome',get_template_directory_uri().'/assets/libs/font-awesome-4.1.0/css/font-awesome.min.css');
 
     wp_enqueue_script('jquery-ui',"//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js");
+
+    $page = get_page_by_title('Calendar');
+
+    if(is_page($page->ID)) {
+      wp_enqueue_script('calendar-script',get_template_directory_uri().'/assets/js/calendar-script.js');
+    }
   }
+
   add_action( 'wp_enqueue_scripts', 'WPS_scripts' );
 
   //theme supports

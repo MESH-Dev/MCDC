@@ -1638,7 +1638,7 @@ header #mainNav ul li ul li a {
   padding: 0;
 }
 /* line 66, assets/sass/_layout.scss */
-header #mainNav ul li:hover a {
+header #mainNav ul li.menu-item-has-children:hover a {
   background: #f26e61;
   opacity: 1;
 }
@@ -2141,12 +2141,12 @@ header .content-right img {
 }
 /* line 215, assets/sass/_layout.scss */
 .calendar-entry-header .calendar-entry-date-day {
-  line-height: 36px;
-  width: 39px;
+  line-height: 33px;
+  width: 33px;
   float: left;
   text-align: center;
   border-radius: 50%;
-  height: 36px;
+  height: 33px;
   border-style: solid;
   border-width: 3px;
   margin-right: 3px;

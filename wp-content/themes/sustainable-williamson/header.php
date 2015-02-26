@@ -63,6 +63,8 @@
     <div class="container white-ribbon">
       <div class="content-right">
 
+        <span><a href="<?php the_permalink(get_page_by_title('Login')); ?>">Login</a> to your wellness account.</span>
+
         <!-- Add the logo image here -->
         <img src="<?php echo get_template_directory_uri() ?>/assets/img/Williamson_seal_logo.png" />
 

@@ -8,7 +8,7 @@
     <div class="four columns">
       <div class="footer-content">
         <div class="footer-logo">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/SW_Logo_white.png" />
+          <a href="<?php echo get_bloginfo('url'); ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/img/MCDC_logo1.jpg" /></a>
         </div>
         <div class="footer-contact">
           <p>29 East 3rd Ave<br/>

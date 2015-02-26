@@ -1630,6 +1630,7 @@ header #mainNav ul li ul {
   background: #f26e61;
   margin-top: -1px;
   display: none;
+  right: 0;
 }
 /* line 64, assets/sass/_layout.scss */
 header #mainNav ul li ul li a {

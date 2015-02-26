@@ -73,6 +73,7 @@
   </div>
 
   <div id="responsiveNav">
+    <div class="close"><i class="fa fa-times"></i></div>
     <?php if(has_nav_menu('main_nav')){
         $defaults = array(
           'theme_location'  => 'main_nav',

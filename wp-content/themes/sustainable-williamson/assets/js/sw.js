@@ -30,6 +30,10 @@ jQuery(document).ready(function($){
     $('#responsiveNav').toggle('slide', {direction:'right'}, 300);
   });
 
+  $('.close').click(function() {
+    $('#responsiveNav').toggle('slide', {direction:'right'}, 300);
+  })
+
   // Toggle header tabs
 
   $('.top-1').hover(function() {

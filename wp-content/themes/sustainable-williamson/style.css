@@ -115,73 +115,78 @@ $minion:"minion-pro";
 }
 
 /* line 65, assets/sass/_base.scss */
+.purple {
+  color: #a874ca;
+}
+
+/* line 67, assets/sass/_base.scss */
 .black {
   color: black;
   border-color: black;
 }
 
-/* line 66, assets/sass/_base.scss */
+/* line 68, assets/sass/_base.scss */
 .black-bg {
   background: black;
 }
 
-/* line 67, assets/sass/_base.scss */
+/* line 69, assets/sass/_base.scss */
 .education {
   color: #2f8b7b;
   border-color: #2f8b7b;
 }
 
-/* line 68, assets/sass/_base.scss */
+/* line 70, assets/sass/_base.scss */
 .education-bg {
   background: #2f8b7b;
 }
 
-/* line 69, assets/sass/_base.scss */
+/* line 71, assets/sass/_base.scss */
 .clinic {
   color: #fdc606;
   border-color: #fdc606;
 }
 
-/* line 70, assets/sass/_base.scss */
+/* line 72, assets/sass/_base.scss */
 .clinic-bg {
   background: #fdc606;
 }
 
-/* line 71, assets/sass/_base.scss */
+/* line 73, assets/sass/_base.scss */
 .running {
   color: #f88617;
   border-color: #f88617;
 }
 
-/* line 72, assets/sass/_base.scss */
+/* line 74, assets/sass/_base.scss */
 .running-bg {
   background: #f88617;
 }
 
-/* line 73, assets/sass/_base.scss */
+/* line 75, assets/sass/_base.scss */
 .agricultural {
   color: #72ac45;
   border-color: #72ac45;
 }
 
-/* line 74, assets/sass/_base.scss */
+/* line 76, assets/sass/_base.scss */
 .agricultural-bg {
   background: #72ac45;
 }
 
-/* line 76, assets/sass/_base.scss */
+/* line 78, assets/sass/_base.scss */
 .events {
   color: #a971cc;
 }
 
-/* line 77, assets/sass/_base.scss */
+/* line 79, assets/sass/_base.scss */
 .events-bg {
   background: #a971cc;
 }
 
 /* #Basic Styles
 ================================================== */
-/* line 81, assets/sass/_base.scss */
+/* line 83, assets/sass/_base.scss */
 body {
   -webkit-font-smoothing: antialiased;
   /* Fix for webkit rendering */
@@ -192,7 +197,7 @@ body {
 ================================================== */
 /* #Forms
 ================================================== */
-/* line 95, assets/sass/_base.scss */
+/* line 97, assets/sass/_base.scss */
 input[type="text"],
 input[type="email"],
 textarea {
@@ -206,23 +211,23 @@ textarea {
   box-sizing: border-box;
 }
 
-/* line 98, assets/sass/_base.scss */
+/* line 100, assets/sass/_base.scss */
 input[type="text"] {
   width: 49%;
 }
 
-/* line 99, assets/sass/_base.scss */
+/* line 101, assets/sass/_base.scss */
 input[type="email"] {
   width: 49%;
   float: right;
 }
 
-/* line 100, assets/sass/_base.scss */
+/* line 102, assets/sass/_base.scss */
 textarea {
   width: 100%;
 }
 
-/* line 104, assets/sass/_base.scss */
+/* line 106, assets/sass/_base.scss */
 input[type="submit"] {
   padding: 1% 10%;
   display: block;
@@ -238,7 +243,7 @@ input[type="submit"] {
   width: 100%;
 }
 
-/* line 105, assets/sass/_base.scss */
+/* line 107, assets/sass/_base.scss */
 input[type="submit"]:hover {
   color: white;
   background: black;
@@ -249,7 +254,7 @@ input[type="submit"]:hover {
 ================================================== */
 /* #Images
 ================================================== */
-/* line 115, assets/sass/_base.scss */
+/* line 117, assets/sass/_base.scss */
 img {
   max-width: 100%;
   height: auto;
@@ -257,60 +262,60 @@ img {
 
 /* WordPress Image Styles
    ========================================================================== */
-/* line 122, assets/sass/_base.scss */
+/* line 124, assets/sass/_base.scss */
 .alignnone {
   margin: 5px 20px 20px 0;
 }
 
-/* line 123, assets/sass/_base.scss */
+/* line 125, assets/sass/_base.scss */
 .aligncenter, div.aligncenter {
   display: block;
   margin: 5px auto 5px auto;
 }
 
-/* line 124, assets/sass/_base.scss */
+/* line 126, assets/sass/_base.scss */
 .alignright {
   float: right;
   margin: 5px 0 20px 20px;
 }
 
-/* line 125, assets/sass/_base.scss */
+/* line 127, assets/sass/_base.scss */
 .alignleft {
   float: left;
   margin: 5px 20px 20px 0;
 }
 
-/* line 126, assets/sass/_base.scss */
+/* line 128, assets/sass/_base.scss */
 .aligncenter {
   display: block;
   margin: 5px auto 5px auto;
 }
 
-/* line 127, assets/sass/_base.scss */
+/* line 129, assets/sass/_base.scss */
 a img.alignright {
   float: right;
   margin: 5px 0 20px 20px;
 }
 
-/* line 128, assets/sass/_base.scss */
+/* line 130, assets/sass/_base.scss */
 a img.alignnone {
   margin: 5px 20px 20px 0;
 }
 
-/* line 129, assets/sass/_base.scss */
+/* line 131, assets/sass/_base.scss */
 a img.alignleft {
   float: left;
   margin: 5px 20px 20px 0;
 }
 
-/* line 130, assets/sass/_base.scss */
+/* line 132, assets/sass/_base.scss */
 a img.aligncenter {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 131, assets/sass/_base.scss */
+/* line 133, assets/sass/_base.scss */
 .wp-caption {
   background: #FFF;
   max-width: 96%;
@@ -318,22 +323,22 @@ a img.aligncenter {
   text-align: center;
 }
 
-/* line 132, assets/sass/_base.scss */
+/* line 134, assets/sass/_base.scss */
 .wp-caption.alignnone {
   margin: 5px 20px 20px 0;
 }
 
-/* line 133, assets/sass/_base.scss */
+/* line 135, assets/sass/_base.scss */
 .wp-caption.alignleft {
   margin: 5px 20px 20px 0;
 }
 
-/* line 134, assets/sass/_base.scss */
+/* line 136, assets/sass/_base.scss */
 .wp-caption.alignright {
   margin: 5px 0 20px 20px;
 }
 
-/* line 135, assets/sass/_base.scss */
+/* line 137, assets/sass/_base.scss */
 .wp-caption img {
   border: 0 none;
   height: auto;
@@ -343,7 +348,7 @@ a img.aligncenter {
   width: auto;
 }
 
-/* line 136, assets/sass/_base.scss */
+/* line 138, assets/sass/_base.scss */
 .wp-caption p.wp-caption-text, .gallery-caption {
   font-size: 11px;
   line-height: 17px;
@@ -351,7 +356,7 @@ a img.aligncenter {
   padding: 0 4px 5px;
 }
 
-/* line 139, assets/sass/_base.scss */
+/* line 141, assets/sass/_base.scss */
 .add-bottom {
   margin-bottom: 20px !important;
 }

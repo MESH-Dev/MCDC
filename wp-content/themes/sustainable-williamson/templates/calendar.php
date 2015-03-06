@@ -71,7 +71,7 @@
 
                       ?>
 
-                        <div class="calendar-current-title"><?php echo get_the_title(); ?></div>
+                        <div class="calendar-current-title purple"><?php echo get_the_title(); ?></div>
 
                         <div class="calendar-entry-body">
                           <?php the_content(); ?>

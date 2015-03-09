@@ -2311,16 +2311,11 @@ h3 {
 }
 
 /* line 258, assets/sass/_layout.scss */
-.case-study:hover .case-study-image {
-  opacity: 0.7;
-}
-
-/* line 259, assets/sass/_layout.scss */
 .case-study:hover .case-study-title {
   background-color: black;
 }
 
-/* line 260, assets/sass/_layout.scss */
+/* line 259, assets/sass/_layout.scss */
 .case-study:hover .case-study-title span {
   color: white;
 }
@@ -2329,9 +2324,31 @@ h3 {
 .resources {
   margin-left: 0 !important;
   margin-bottom: 20px;
+  height: 300px;
+}
+/* line 262, assets/sass/_layout.scss */
+.resources .case-study-title {
+  background-color: black;
+}
+/* line 264, assets/sass/_layout.scss */
+.resources .case-study-title .case-study-title-text span {
+  color: white;
+}
+/* line 265, assets/sass/_layout.scss */
+.resources .case-study-title .case-study-title-text span:hover {
+  opacity: 0.7;
+}
+/* line 269, assets/sass/_layout.scss */
+.resources .case-study:hover .case-study-title {
+  background-color: white;
+  border: 2px solid black;
+}
+/* line 270, assets/sass/_layout.scss */
+.resources .case-study:hover .case-study-title span {
+  color: black;
 }
 
-/* line 263, assets/sass/_layout.scss */
+/* line 273, assets/sass/_layout.scss */
 .calendar-type-header {
   border-top: 2px solid black;
   padding: 30px 0 20px;
@@ -2340,12 +2357,12 @@ h3 {
   width: 100%;
 }
 
-/* line 272, assets/sass/_layout.scss */
+/* line 282, assets/sass/_layout.scss */
 #image .image-holder {
   height: 180px;
 }
 
-/* line 276, assets/sass/_layout.scss */
+/* line 286, assets/sass/_layout.scss */
 .header-image {
   height: 600px;
   position: absolute;
@@ -2354,77 +2371,77 @@ h3 {
   width: 100%;
 }
 
-/* line 284, assets/sass/_layout.scss */
+/* line 294, assets/sass/_layout.scss */
 .lightbox {
   display: none;
 }
 
-/* line 288, assets/sass/_layout.scss */
+/* line 298, assets/sass/_layout.scss */
 .featherlight-content {
   padding: 20px 20px 15px 20px !important;
 }
 
 /* PAGE Styles
 ================================================== */
-/* line 295, assets/sass/_layout.scss */
+/* line 305, assets/sass/_layout.scss */
 #page-content {
   padding-top: 30px;
 }
-/* line 296, assets/sass/_layout.scss */
+/* line 306, assets/sass/_layout.scss */
 #page-content .page-content-block {
   margin-left: 0px;
 }
 
 /* Contact Styles
 ================================================== */
-/* line 302, assets/sass/_layout.scss */
+/* line 312, assets/sass/_layout.scss */
 #wpgmza_map {
   margin-bottom: 30px;
 }
 
 /* FOOTER Styles
 ================================================== */
-/* line 309, assets/sass/_layout.scss */
+/* line 319, assets/sass/_layout.scss */
 footer {
   background: black;
   width: 100%;
 }
-/* line 310, assets/sass/_layout.scss */
+/* line 320, assets/sass/_layout.scss */
 footer .footer-content {
   padding: 30px 0px;
 }
-/* line 311, assets/sass/_layout.scss */
+/* line 321, assets/sass/_layout.scss */
 footer .footer-content .footer-logo {
   margin-bottom: 10px;
 }
-/* line 313, assets/sass/_layout.scss */
+/* line 323, assets/sass/_layout.scss */
 footer .footer-content .footer-contact p {
   font-family: nexa_light;
   color: white;
   line-height: 1.5em;
 }
-/* line 315, assets/sass/_layout.scss */
+/* line 325, assets/sass/_layout.scss */
 footer .footer-content .footer-headline {
   border-bottom: 3px solid white;
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-/* line 316, assets/sass/_layout.scss */
+/* line 326, assets/sass/_layout.scss */
 footer .footer-content .footer-headline span {
   font-family: "league-gothic";
   text-transform: uppercase;
   color: white;
   font-size: 22px;
 }
-/* line 318, assets/sass/_layout.scss */
+/* line 328, assets/sass/_layout.scss */
 footer .footer-content .footer-body {
   padding-bottom: 5px;
 }
-/* line 319, assets/sass/_layout.scss */
+/* line 329, assets/sass/_layout.scss */
 footer .footer-content .footer-body p {
   margin-bottom: 10px;
 }
-/* line 320, assets/sass/_layout.scss */
+/* line 330, assets/sass/_layout.scss */
 footer .footer-content .footer-body p a {
   font-family: "league-gothic";
   text-transform: uppercase;
@@ -2432,12 +2449,12 @@ footer .footer-content .footer-body p a {
   font-size: 22px;
   text-decoration: none;
 }
-/* line 321, assets/sass/_layout.scss */
+/* line 331, assets/sass/_layout.scss */
 footer .footer-content .footer-body p a:hover {
   opacity: 0.7;
 }
 
-/* line 327, assets/sass/_layout.scss */
+/* line 337, assets/sass/_layout.scss */
 .circle-icon {
   float: left;
   margin-right: 5px;
@@ -2450,7 +2467,7 @@ footer .footer-content .footer-body p a:hover {
   text-align: center;
 }
 
-/* line 339, assets/sass/_layout.scss */
+/* line 349, assets/sass/_layout.scss */
 .circle-icon:hover {
   background-color: black;
   color: white;
@@ -2472,7 +2489,7 @@ footer .footer-content .footer-body p a:hover {
 </a>
 
 */
-/* line 362, assets/sass/_layout.scss */
+/* line 372, assets/sass/_layout.scss */
 .btn {
   padding: 1% 10%;
   display: block;
@@ -2481,25 +2498,25 @@ footer .footer-content .footer-body p a:hover {
   text-align: center;
   margin-bottom: 8px;
 }
-/* line 363, assets/sass/_layout.scss */
+/* line 373, assets/sass/_layout.scss */
 .btn .btn-headline {
   font-family: "league-gothic";
   text-transform: uppercase;
   font-size: 20px;
   line-height: 30px;
 }
-/* line 364, assets/sass/_layout.scss */
+/* line 374, assets/sass/_layout.scss */
 .btn .btn-body {
   font-family: nexa_light;
 }
 
-/* line 366, assets/sass/_layout.scss */
+/* line 376, assets/sass/_layout.scss */
 .btn:hover {
   background-color: black !important;
   color: white;
 }
 
-/* line 368, assets/sass/_layout.scss */
+/* line 378, assets/sass/_layout.scss */
 .filter-header {
   display: inline-block;
   float: left;
@@ -2507,7 +2524,7 @@ footer .footer-content .footer-body p a:hover {
   line-height: 44px;
 }
 
-/* line 369, assets/sass/_layout.scss */
+/* line 379, assets/sass/_layout.scss */
 .filter {
   float: left;
   padding: 1% 7%;
@@ -2515,13 +2532,13 @@ footer .footer-content .footer-body p a:hover {
   cursor: pointer;
 }
 
-/* line 370, assets/sass/_layout.scss */
+/* line 380, assets/sass/_layout.scss */
 .filter:hover {
   background-color: black !important;
   color: white;
 }
 
-/* line 372, assets/sass/_layout.scss */
+/* line 382, assets/sass/_layout.scss */
 .calendar-icon {
   border: 2px solid black;
   text-align: center;
@@ -2529,7 +2546,7 @@ footer .footer-content .footer-body p a:hover {
   font-size: 10px !important;
 }
 
-/* line 373, assets/sass/_layout.scss */
+/* line 383, assets/sass/_layout.scss */
 .calendar-icon:hover {
   background: black;
   color: white;
@@ -2538,13 +2555,13 @@ footer .footer-content .footer-body p a:hover {
 
 /* #Blog Styles
 ================================================== */
-/* line 378, assets/sass/_layout.scss */
+/* line 388, assets/sass/_layout.scss */
 .active {
   background: black;
   color: white;
 }
 
-/* line 380, assets/sass/_layout.scss */
+/* line 390, assets/sass/_layout.scss */
 .calendar-by-date {
   padding-top: 30px;
   border-top: 2px solid black;

@@ -1413,7 +1413,6 @@ or wrap each row of columns in a <div class="row"> */
 header {
   background-position: top center;
   width: 100%;
-  height: 2000px;
   position: absolute;
   overflow: hidden;
   text-align: center;

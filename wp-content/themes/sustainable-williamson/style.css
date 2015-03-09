@@ -2342,6 +2342,9 @@ h3 {
 .resources .case-study:hover .case-study-title {
   background-color: white;
   border: 2px solid black;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 /* line 270, assets/sass/_layout.scss */
 .resources .case-study:hover .case-study-title span {

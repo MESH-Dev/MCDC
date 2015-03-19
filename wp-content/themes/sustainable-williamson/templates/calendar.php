@@ -19,12 +19,7 @@
         <div class="row">
           <?php the_content(); ?>
 
-          <div class="calendar-current">
 
-            <div class="calendar-current-left">
-              <div class="calendar-current-today">Today's Events!</div>
-            </div>
-            <div class="calendar-current-right">
               <?php
 
                 $args = array(
@@ -39,12 +34,9 @@
                 // The Loop
                 if ( $the_query->have_posts() ) {
 
-                  ?>
+                  $count = 0;
 
-                  <div class="calendar-current">
-                    <div class="calendar-current-header events">
-                      <h3>Events for <?php echo date("l, F j"); ?></h3>
-                    </div>
+                  ?>
 
                     <?php
 
@@ -53,8 +45,6 @@
 
                       $firstDate = date('Y-m-d', get_field('event_date'));
                       $secondDate = date('Y-m-d');
-
-
 
                       $terms = get_the_terms($post->ID, 'type');
 
@@ -69,22 +59,44 @@
 
                       if ($firstDate == $secondDate) {
 
-                      ?>
+                        if ($count == 0) { ?>
 
-                        <div class="calendar-current-title purple"><?php echo get_the_title(); ?></div>
+                          <div class="calendar-current">
 
-                        <div class="calendar-entry-body">
-                          <?php the_content(); ?>
-                        </div>
+                            <div class="calendar-current-left">
+                              <div class="calendar-current-today">Today's Events!</div>
+                            </div>
+                            <div class="calendar-current-right">
+                              <div class="calendar-current">
+                                <div class="calendar-current-header events">
+                                  <h3>Events for <?php echo date("l, F j"); ?></h3>
+                                </div>
 
+                        <?php }
 
-                      <?php
+                        ?>
+
+                          <div class="calendar-current-title purple"><?php echo get_the_title(); ?></div>
+
+                          <div class="calendar-entry-body">
+                            <?php the_content(); ?>
+                          </div>
+
+                        <?php
+
+                      $count = $count + 1;
 
                       }
                     }
-                    ?>
 
-                  </div>
+                    if ($count > 0) { ?>
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <?php }
+                    ?>
 
                   <?php
                 } else {
@@ -94,9 +106,7 @@
                 wp_reset_postdata();
 
               ?>
-            </div>
 
-          </div>
 
           <div class="calendar-current-filter">
             <h3 class="filter-header">Filter Upcoming Events</h3>

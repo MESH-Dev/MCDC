@@ -107,6 +107,8 @@
         // The Loop
         if ( $the_query->have_posts() ) {
 
+          $count = 0;
+
           while ( $the_query->have_posts() ) {
             $the_query->the_post();
 
@@ -123,6 +125,12 @@
 
             ?>
 
+            <?php if ($date > strtotime(date('Y-m-d H:i:s'))) {
+
+              $count = $count + 1;
+
+            ?>
+
             <div class="four columns">
               <div class="calendar-entry-header">
 
@@ -136,8 +144,15 @@
               </div>
             </div>
 
+            <?php } ?>
+
             <?php
           }
+
+          if ($count == 0) {
+            echo "<p style='text-align:center'>No upcoming events!</p>";
+          }
+
         } else {
           // no posts found
         }
